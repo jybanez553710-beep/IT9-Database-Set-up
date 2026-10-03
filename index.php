@@ -1,5 +1,6 @@
 <?php
 
+include "auth.php";
 include "db.php";
 
 $clients_result = mysqli_query(
@@ -89,7 +90,7 @@ $revenue = $revenue_row['s'];
 
 <p>
 
-    <a href="/assessment_beginner/pages/clients_add.php">
+    <a href="<?php echo $base; ?>/pages/clients_add.php">
         Add Client
     </a>
 
@@ -97,7 +98,7 @@ $revenue = $revenue_row['s'];
 
 <p>
 
-    <a href="/assessment_beginner/pages/bookings_create.php">
+    <a href="<?php echo $base; ?>/pages/bookings_create.php">
         Create Booking
     </a>
 
