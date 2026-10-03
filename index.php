@@ -50,7 +50,7 @@ $revenue = $revenue_row['s'];
 
     <title>Assessment Dashboard</title>
 
-</head>
+<link rel="stylesheet" href="<?php echo $base; ?>/style.css"></head>
 
 <body>
 
@@ -60,7 +60,7 @@ $revenue = $revenue_row['s'];
 
 <h2>System Overview</h2>
 
-<ul>
+<ul class="stats">
 
     <li>
         Total Clients:
@@ -90,7 +90,7 @@ $revenue = $revenue_row['s'];
 
 <p>
 
-    <a href="<?php echo $base; ?>/pages/clients_add.php">
+    <a class="btn" href="<?php echo $base; ?>/pages/clients_add.php">
         Add Client
     </a>
 
@@ -98,7 +98,7 @@ $revenue = $revenue_row['s'];
 
 <p>
 
-    <a href="<?php echo $base; ?>/pages/bookings_create.php">
+    <a class="btn" href="<?php echo $base; ?>/pages/bookings_create.php">
         Create Booking
     </a>
 

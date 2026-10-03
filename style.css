@@ -1,0 +1,251 @@
+/* ===========================================================
+   Cute Pink Theme
+   One stylesheet for the whole system (linked from every page)
+   =========================================================== */
+
+:root {
+    --pink-50:  #fff7fb;
+    --pink-100: #ffe9f3;
+    --pink-200: #ffd0e5;
+    --pink-300: #ffb3d1;
+    --pink-400: #ff8fbf;
+    --pink-500: #ff6fa8;
+    --pink-600: #e0457f;
+    --pink-700: #b0275d;
+    --pink-800: #8a2b53;
+    --plum:     #c9558a;
+    --plum-dark:#9c3a68;
+}
+
+* { box-sizing: border-box; }
+
+/* ---------- Page ---------- */
+body {
+    font-family: "Quicksand", "Trebuchet MS", "Comic Sans MS", Arial, sans-serif;
+    color: var(--pink-800);
+    margin: 0 auto;
+    padding: 24px 20px 48px;
+    max-width: 980px;
+    min-height: 100vh;
+
+    background-color: #ffd6e8;
+    background-image:
+        radial-gradient(#ffffff88 12%, transparent 13%),
+        linear-gradient(135deg, #ffe4f1, #ffc2dd);
+    background-size: 30px 30px, 100% 100%;
+    background-attachment: fixed;
+}
+
+h1, h2, h3 {
+    color: var(--pink-600);
+    margin: 22px 0 10px;
+}
+h1 { font-size: 30px; }
+h2 { font-size: 22px; }
+
+p { line-height: 1.6; }
+
+hr {
+    border: none;
+    border-top: 3px dotted var(--pink-300);
+    margin: 20px 0;
+}
+
+/* ---------- Links ---------- */
+a {
+    color: var(--pink-600);
+    font-weight: bold;
+    text-decoration: none;
+}
+a:hover {
+    color: var(--pink-700);
+    text-decoration: underline wavy var(--pink-400);
+    text-underline-offset: 4px;
+}
+
+/* ---------- Navigation ---------- */
+.nav {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 12px 14px;
+    margin-bottom: 8px;
+    background: var(--pink-50);
+    border: 3px solid var(--pink-300);
+    border-radius: 999px;
+    box-shadow: 0 4px 0 var(--pink-400);
+}
+.nav a {
+    padding: 8px 16px;
+    border-radius: 999px;
+    color: var(--pink-600);
+    transition: background 0.15s, transform 0.1s;
+}
+.nav a:hover {
+    background: var(--pink-200);
+    text-decoration: none;
+    transform: translateY(-2px);
+}
+.nav a.logout {
+    margin-left: auto;
+    background: var(--plum);
+    color: #fff;
+}
+.nav a.logout:hover { background: var(--plum-dark); }
+
+/* ---------- Content cards ---------- */
+/* Anything not inside the nav sits on a soft card look via sections below */
+
+/* ---------- Tables ---------- */
+table {
+    width: 100%;
+    margin: 14px 0 24px;
+    border: 3px solid var(--pink-300);
+    border-radius: 20px;
+    border-collapse: separate;
+    border-spacing: 0;
+    overflow: hidden;
+    background: var(--pink-50);
+    box-shadow: 0 5px 0 var(--pink-400);
+}
+th, td {
+    padding: 12px 14px;
+    text-align: left;
+    border: none;
+    border-bottom: 2px dotted var(--pink-200);
+}
+th {
+    background: var(--pink-500);
+    color: #fff;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+tr:last-child td { border-bottom: none; }
+tr:nth-child(even) td { background: var(--pink-100); }
+tr:hover td { background: var(--pink-200); }
+
+/* ---------- Forms ---------- */
+form {
+    max-width: 460px;
+    padding: 22px;
+    margin: 14px 0 24px;
+    background: var(--pink-50);
+    border: 4px solid var(--pink-300);
+    border-radius: 28px;
+    box-shadow: 0 8px 0 var(--pink-400), 0 14px 24px rgba(233, 30, 99, 0.2);
+}
+label {
+    display: inline-block;
+    margin-bottom: 4px;
+    font-weight: bold;
+    color: var(--pink-600);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="date"],
+input[type="password"],
+select,
+textarea {
+    width: 100%;
+    padding: 11px 16px;
+    font-size: 15px;
+    font-family: inherit;
+    color: var(--pink-800);
+    background: #fff;
+    border: 2px solid var(--pink-300);
+    border-radius: 20px;
+}
+input::placeholder { color: #f3a6c4; }
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--pink-500);
+    box-shadow: 0 0 0 4px rgba(255, 111, 168, 0.25);
+}
+
+/* ---------- Buttons ---------- */
+button,
+.btn {
+    display: inline-block;
+    padding: 11px 22px;
+    font-size: 15px;
+    font-family: inherit;
+    font-weight: bold;
+    color: #fff;
+    background: var(--pink-500);
+    border: none;
+    border-radius: 999px;
+    box-shadow: 0 4px 0 var(--pink-600);
+    cursor: pointer;
+    transition: transform 0.1s, box-shadow 0.1s;
+}
+button:hover,
+.btn:hover {
+    background: #ff5a9b;
+    color: #fff;
+    text-decoration: none;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 0 var(--pink-600);
+}
+button:active,
+.btn:active {
+    transform: translateY(3px);
+    box-shadow: 0 1px 0 var(--pink-600);
+}
+
+/* ---------- Lists ---------- */
+ul { line-height: 1.8; }
+
+/* Dashboard stat cards */
+ul.stats {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 16px;
+}
+ul.stats li {
+    padding: 18px;
+    text-align: center;
+    background: var(--pink-50);
+    border: 3px solid var(--pink-300);
+    border-radius: 24px;
+    box-shadow: 0 5px 0 var(--pink-400);
+    font-size: 15px;
+}
+ul.stats li strong {
+    display: block;
+    margin-top: 6px;
+    font-size: 28px;
+    color: var(--pink-600);
+}
+
+/* ---------- Login page ---------- */
+body.login-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+body.login-page form { width: 100%; max-width: 360px; }
+body.login-page h2 { font-size: 28px; text-align: center; }
+body.login-page button { width: 100%; margin-top: 4px; }
+
+.error {
+    padding: 10px 16px;
+    margin-bottom: 8px;
+    color: var(--pink-700);
+    background: var(--pink-100);
+    border: 2px dotted var(--pink-400);
+    border-radius: 16px;
+}
+
+/* ---------- Small screens ---------- */
+@media (max-width: 600px) {
+    .nav { border-radius: 24px; }
+    table { display: block; overflow-x: auto; }
+}

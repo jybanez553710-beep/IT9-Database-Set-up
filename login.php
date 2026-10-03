@@ -38,12 +38,12 @@ if (isset($_POST['login'])) {
 ?>
 <!doctype html>
 <html>
-<head><meta charset="utf-8"><title>Login</title></head>
-<body>
-<h2>Login</h2>
+<head><meta charset="utf-8"><title>Login</title><link rel="stylesheet" href="<?php echo $base; ?>/style.css"></head>
+<body class="login-page">
+<h2>🎀 Login 🎀</h2>
 
 <?php if ($error) { ?>
-  <p style="color:red;"><?php echo $error; ?></p>
+  <p class="error"><?php echo $error; ?></p>
 <?php } ?>
 
 <form method="post">
